@@ -1,0 +1,10 @@
+.heroSmall {
+  background: linear-gradient(
+      to bottom,
+      rgba(242, 253, 255, 0.4),
+      rgba(16, 25, 53, 0.4)
+    ),
+    url("https://apollotran.com/demo/at_auros/themes/at_auros/assets/img/bg-beagrumb.jpg")
+      center center/cover no-repeat;
+  color: #f2fdff;
+}

@@ -1,0 +1,29 @@
+.shopSectionWrapper {
+  width: 100vw;
+  padding: 10px;
+}
+
+.shopSection {
+  width: 100%;
+  display: flex;
+}
+
+.filterSection {
+  margin-top: 10px;
+}
+
+.shopItemsSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .shopSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .shopItemsSection {
+    justify-content: center;: center;
+  }
+}

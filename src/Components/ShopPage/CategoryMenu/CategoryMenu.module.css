@@ -1,0 +1,50 @@
+.shopCategoryMenu {
+  /* width: 50%; */
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.heading {
+  margin-top: 0px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #101935;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.menuItem .menuBtn {
+  display: inline-block;
+  width: 100%;
+  border-color: #222;
+  color: #222;
+}
+
+.menuBtn:hover {
+  color: indianred;
+}
+
+@media screen and (max-width: 991px) {
+  .heading {
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .shopCategoryMenu {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .shopCategoryMenu {
+    padding-right: 0px;
+
+  }
+}

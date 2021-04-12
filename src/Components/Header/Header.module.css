@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: auto;
+  position: relative;
+  background-color: #dbcbd8;
+}
+
+.logoContainer {
+  padding: 0px 3px;
+  display: flex;
+  align-items: flex-end
+}
+
+.logo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.logoText {
+  display: inline-block;
+  transform: translateY(9px);
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.navbar {
+  margin-left: 40px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  align-self: flex-end;
+}
+
+.navItem {
+  color: #111;
+  font-size: 20px;
+  margin: 0px 15px
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .logoText {
+    display: none;
+  }
+}

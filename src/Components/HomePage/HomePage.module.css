@@ -1,0 +1,95 @@
+.shopImageContainer {
+  display: flex;
+}
+
+.shopImage {
+  margin: 20px;
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.shopImage:hover {
+  text-decoration: none;
+}
+
+.shopImageDiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopImageDiv {
+  transition: transform 0.5s ease;
+}
+
+.shopImageDiv.shopLiving {
+  background: linear-gradient(
+      191deg,
+      rgba(2, 0, 36, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    url("https://apollotran.com/demo/at_auros/59-large_default/hummingbird-vector-graphics.jpg")
+      center center/cover no-repeat;
+}
+
+.shopImageDiv.shopLiving:hover {
+  background: linear-gradient(
+      191deg,
+      rgba(2, 0, 36, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("https://apollotran.com/demo/at_auros/59-large_default/hummingbird-vector-graphics.jpg")
+      center center/cover no-repeat;
+
+  transform: scale(1.1);
+}
+
+.shopImageDiv.shopKitchen {
+  background: linear-gradient(
+      191deg,
+      rgba(2, 0, 36, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    url("https://apollotran.com/demo/at_auros/29-large_default/brown-bear-printed-sweater.jpg")
+      center center/cover no-repeat;
+}
+
+.shopImageDiv.shopKitchen:hover {
+  background: linear-gradient(
+      191deg,
+      rgba(2, 0, 36, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("https://apollotran.com/demo/at_auros/29-large_default/brown-bear-printed-sweater.jpg")
+      center center/cover no-repeat;
+  transform: scale(1.1);
+}
+
+.shopImageText {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.shopImageDiv:hover .shopImageText {
+  color: #111;
+  font-size: 40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .shopImageContainer {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .shopImage {
+    width: 90%;
+    height: 300px;
+  }
+}

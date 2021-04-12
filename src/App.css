@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+/* AntD and Bootstrap modifications */
+
+#navbar {
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbarNavDropdown {
+  align-self: flex-end;
+  margin-left: 40px;
+  font-size: 20px;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-item {
+  margin: 0px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ant-dropdown-link, .ant-dropdown-link:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .9);
 }
 
-.App-link {
-  color: #61dafb;
+#navbarDropdownMenuLink::after {
+  content: '';
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-dropdown-link::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.ant-dropdown-menu {
+  font-size: 18px;
+}
+
+.page-footer {
+  background-color: #101935;
+  color: #DBCBD8;
+}
+
+.page-footer h5 {
+  color: #fff;
+  font-size: 25px;
+}
+
+.page-footer a {
+  color: #9AD4D6;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  color: #9AD4D6;
+  /* text-decoration: none; */
+}
+
+
+/* Utilitiea */
+
+.shop-lamp {
+  background: url('https://apollotran.com/demo/at_auros/59-large_default/hummingbird-vector-graphics.jpg')
+              center center/cover no-repeat
+}
+
+.shop-table {
+  background: url('https://apollotran.com/demo/at_auros/47-home_default/mug-today-is-a-good-day.jpg')
+              center center/cover no-repeat
+}
+
+.shop-chairs {
+  background: url('https://apollotran.com/demo/at_auros/49-home_default/mountain-fox-cushion.jpg')
+              center center/cover no-repeat
+}
+
+.shop-blackChair {
+  background: url('https://apollotran.com/demo/at_auros/51-large_default/brown-bear-cushion.jpg')
+              center center/cover no-repeat
 }
