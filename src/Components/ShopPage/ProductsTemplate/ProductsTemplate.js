@@ -2,17 +2,30 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './ProductsTemplate.module.css'
 
-export default function ProductsTemplate({name, price, path, category}) {
+import {connect} from 'react-redux'
+import {addToCart} from '../../../redux/Shopping/shopping-actions'
+
+function ProductsTemplate({name, price, path, category, addToCart}) {
+
+
   return (
     <>
-      <Link className={styles.productCard}>
-        <div className={styles.productImage+" shop-"+path}></div>
-        <div className={styles.productName}>{name}</div>
+      <div className={styles.productCard}>
+        <Link to={"/product/"+ path} className={styles.productImage+" shop-"+path}></Link>
+        <Link to={"/product/"+ path} className={styles.productName}>{name}</Link>
         <div className={styles.productPrice}>${price}.00 USD</div>
-        <button className={styles.productBtn+" btn btn-primary"}>
+        <button onClick={() => addToCart({name, price, path, category})} className={styles.productBtn+" btn btn-primary"}>
           Add to Cart
         </button>
-      </Link>
+      </div>
     </>
   )
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (item) => dispatch(addToCart(item))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ProductsTemplate);

@@ -9,12 +9,14 @@ import getProductsAPI from "../Utilities/productAPI/productAPI";
 const productsAPI = getProductsAPI();
 
 export default function ShopPage({ showByCategory }) {
+  
   let products, productsAPICopy;
   if(showByCategory) {
     productsAPICopy = productsAPI.filter(({category}) => category === showByCategory)
   } else {
     productsAPICopy = [...productsAPI]
   }
+
   products = productsAPICopy.map(({ name, price, path, category }) => {
     return (
       <ProductsTemplate

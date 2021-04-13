@@ -26,10 +26,11 @@
   border-top-right-radius: 5px;
 }
 
-.productName {
+.productName, .productName:hover {
   font-size: 20px;
   color: #000;
-}
+  text-decoration: none;
+} 
 
 .productPrice {
   margin-top: 3px;
