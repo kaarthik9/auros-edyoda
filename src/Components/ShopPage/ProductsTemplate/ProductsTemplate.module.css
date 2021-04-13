@@ -1,7 +1,7 @@
 .productCard {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 340px;
   width: 250px;
   align-items: center;
   border-radius: 5px;
@@ -26,8 +26,13 @@
   border-top-right-radius: 5px;
 }
 
+.productName {
+  font-size: 20px;
+  color: #000;
+}
+
 .productPrice {
-  margin-top: 10px;
+  margin-top: 3px;
   text-align: center;
   color: #101935;
 }
