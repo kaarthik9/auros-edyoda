@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   width: 30vw;
-  height: 70vh;
+  min-height: 30vh;
   overflow-y: scroll;
 }
 
@@ -29,6 +29,7 @@
   justify-content: center;
   text-align: center;
   flex: 1;
+  position: relative;
 }
 
 .productName {
@@ -54,6 +55,15 @@
   width: 95%;
   text-align: center;
   margin: 10px auto;
+}
+
+.removeIcon {
+  position: absolute;
+  cursor: pointer;
+  transform: scale(1.5);
+  top: 20px;
+  right: 5px;
+  color: #ff1111
 }
 
 @media (max-width: 768px) {

@@ -3,8 +3,10 @@ import ProductText from "./ProductText/ProductText";
 import { useState } from "react";
 
 import getProductsAPI from "../Utilities/productAPI/productAPI";
+import { connect } from "react-redux";
+import { addToCart } from "../../redux/Shopping/shopping-actions";
 
-export default function ProductPage(props) {
+function ProductPage(props) {
   let [quantity, setQuantity] = useState(1);
 
   // Updates quantity
@@ -13,17 +15,20 @@ export default function ProductPage(props) {
   };
 
   const productPath = props.match.params.productName;
-
   const productsAPI = getProductsAPI()
+
+  let displayedProduct = productsAPI.filter(product => product.path === productPath);
+  let { name, price, path, category } = displayedProduct[0]
+
+  document.title = name
 
   // Adds to cart
   const sendToCart = (e) => {
     e.preventDefault();
-    // props.addCartItems(nickname, name, quantity, productName, price);
+    // Add item to cart along with quantity
+    props.addToCart({ name, price, path, category }, parseInt(quantity))
+    setQuantity(1)
   };
-
-  let displayedProduct = productsAPI.filter(product => product.path === productPath);
-  let {name, price, path} = displayedProduct[0]
 
   return (
     <div>
@@ -79,3 +84,12 @@ export default function ProductPage(props) {
     </div>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (item, quantity) => { dispatch(addToCart(item, quantity)) }
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(ProductPage)

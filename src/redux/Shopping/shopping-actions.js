@@ -13,7 +13,9 @@ export const addToCart = (item, quantity=1) => {
 export const removeFromCart = (path) => {
   return {
     type: actionTypes.REMOVE_FROM_CART,
-    payload: path
+    payload: {
+      path: path
+    }
   }
 }
 
@@ -21,8 +23,8 @@ export const adjustQty = (path, value) => {
   return {
     type: actionTypes.ADJUST_QTY,
     payload: {
-      path,
-      value
+      path: path,
+      value: value
     }
   }
 }

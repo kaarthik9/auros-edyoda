@@ -26,7 +26,7 @@ const shopReducer = (state = INITIAL_STATE, { type, payload }) => {
     case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter((product) => product.path !== payload.path),
+        cart: state.cart.filter(product => product.path !== payload.path),
       };
 
     case actionTypes.ADJUST_QTY:

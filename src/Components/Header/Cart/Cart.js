@@ -6,8 +6,6 @@ import CartContainer from "./CartContainer/CartContainer";
 import {connect} from "react-redux"
 import Content from "./CartContainer/Content";
 
-// console.log(CartContainer)
-
 function Cart({cartLength}) {
   const text = <span>Cart Items:</span>;
   const content = Content;
